@@ -1,0 +1,90 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+.container{   
+    background-color: black;
+    display: inline;
+    border: none;
+}
+
+.card{
+    background-color: rgb(30, 69, 69);
+    display: inline-block;
+    border: none;
+    background-color: black;
+}
+
+.pokemon{
+    border: 2px solid black;
+    width: 80px;
+    height: 90px;
+    margin: 5px;
+    border-radius: 100%;
+
+}
+
+.pokemon:hover{
+    border-color: aquamarine;
+}
+#ganar {
+    margin-top: 80px;
+    
+}
+
+body{
+    text-align: center;
+    background-color: rgb(2, 2, 2);
+    color: wheat;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+h1{
+    margin: 0%;
+    color: wheat;
+}
+
+img{
+    margin-top: -40px;
+    border-radius: 100%;
+}
+
+.form-control{
+    margin: auto;
+    width: 30%;
+}
+#tabla{
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    border: 2px dashed aquamarine;
+    border-radius: 22px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 15px;
+    margin-top: 15PX;
+}
+#puntos{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+#btnr{
+    margin: auto;
+    display: flex;
+    
+}
+#btn{
+    margin: 5px;
+}
+
+#buscador{
+    display: flex;
+}
