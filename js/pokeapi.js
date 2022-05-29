@@ -32,19 +32,6 @@ btn.addEventListener("click", function(e){
 });
 
 // Segunda parte
-function revolver(arr) {
-    var i,
-        j,
-        temp;
-    for (i = arr.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    return arr;    
-};
-
 function pokemon(){
     var pokemon = Math.floor(Math.random()*899);
     return pokemon;
@@ -76,15 +63,38 @@ function cartas(){
     recorrerCartas(cartas);
 }
 
+function barajar(array) {
+    var currentIndex = array.length;
+    var temporaryValue, randomIndex;
+ 
+    // En cada iteración disminuimos el currentIndex, por lo que el bucle se realiza
+    // mientras sea diferente que 0
+    while (0 !== currentIndex) {
+ 
+        // Elige una posicion del array aleatoriamente
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+ 
+        // Ponemos el elemento seleccionado en la ultima posición del array (currentIndex)
+        // para que no puede volver a ser seleccionado
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+ 
+    return array;
+}
+
 function recorrerCartas(cartt){
 
+    
     let carta2 = cartt
-    carta2.sort()
-    console.log(cartt)
-    let x = revolver(carta2)
-    for(i=0 ; i < cartt.length; i++){
-        pedirPoke(cartt[i]);
-        pedirPoke(revolver(carta2)[i]);
+    carta2.reverse()
+    let cartas = carta2.concat(cartt)
+    console.log(cartas)
+    
+    for(i=0 ; i < cartas.length; i++){
+        pedirPoke(cartas[i]);
     };
 };
 cartas()
