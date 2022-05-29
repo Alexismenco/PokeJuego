@@ -81,7 +81,7 @@ function recorrerCartas(cartt){
     let carta= []
     carta = cartt
     let carta2 = revolver(carta)
-
+    carta2.sort()
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
         pedirPoke(carta2[i]);
