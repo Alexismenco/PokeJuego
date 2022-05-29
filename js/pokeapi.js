@@ -68,30 +68,13 @@ function recorrerCartas(cartt){
     
     
     let carta2= []
-    carta2.push(cartt[10])
-    carta2.push(cartt[11])
-    carta2.push(cartt[12])
-    carta2.push(cartt[13])
-    carta2.push(cartt[15])
-    carta2.push(cartt[14])
-    carta2.push(cartt[17])
-    carta2.push(cartt[18])
-    carta2.push(cartt[19])
-    carta2.push(cartt[16])
-    carta2.push(cartt[9])
-    carta2.push(cartt[2])
-    carta2.push(cartt[3])
-    carta2.push(cartt[4])
-    carta2.push(cartt[5])
-    carta2.push(cartt[6])
-    carta2.push(cartt[7])
-    carta2.push(cartt[8])
-    carta2.push(cartt[0])
-    carta2.push(cartt[1])
+    carta2 = cartt
+    carta2.sort()
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
-        pedirPoke(carta2.sort()[i]);
+        pedirPoke(carta2.reverse()[i]);
     };
+
     
 };
 cartas()
