@@ -69,7 +69,6 @@ function recorrerCartas(cartt){
     
     let carta2= []
     carta2 = cartt
-    carta2.sort()
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
         pedirPoke(carta2.reverse()[i]);
