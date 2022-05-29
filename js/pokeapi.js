@@ -78,13 +78,13 @@ function cartas(){
 
 function recorrerCartas(cartt){
 
-    let carta= []
-    carta = cartt
-    let carta2 = revolver(carta)
+    let carta2 = cartt
     carta2.sort()
+    console.log(cartt)
+    let x = revolver(carta2)
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
-        pedirPoke(carta2[i]);
+        pedirPoke(revolver(carta2)[i]);
     };
 };
 cartas()
