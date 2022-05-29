@@ -63,36 +63,14 @@ function cartas(){
     recorrerCartas(cartas);
 }
 
-function barajar(array) {
-    var currentIndex = array.length;
-    var temporaryValue, randomIndex;
- 
-    // En cada iteración disminuimos el currentIndex, por lo que el bucle se realiza
-    // mientras sea diferente que 0
-    while (0 !== currentIndex) {
- 
-        // Elige una posicion del array aleatoriamente
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
- 
-        // Ponemos el elemento seleccionado en la ultima posición del array (currentIndex)
-        // para que no puede volver a ser seleccionado
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-    array.reverse()
- 
-    return array;
-}
-
 function recorrerCartas(cartt){
 
     let carta2 = cartt
-    let cartas = carta2.concat(cartt)
+    carta2.sort(function(a,b){return a - b;})
+    let cartas = cartt.concat(carta2)
 
     for(i=0 ; i < cartas.length; i++){
-        pedirPoke(barajar(cartas)[i]);
+        pedirPoke(cartas[i]);
     };
 };
 cartas()
