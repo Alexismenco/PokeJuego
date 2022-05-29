@@ -107,7 +107,7 @@ async function pedirPoke(numero){
                         imgEvent[0].setAttribute("src",direccionImagen);
                         imgEvent[1].setAttribute("src",direccionImagen);
                         imgEvent = [];
-                    }, 1200);
+                    }, 1000);
                 };
             };
         };
