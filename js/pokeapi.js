@@ -32,6 +32,19 @@ btn.addEventListener("click", function(e){
 });
 
 // Segunda parte
+function revolver(arr) {
+    var i,
+        j,
+        temp;
+    for (i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;    
+};
+
 function pokemon(){
     var pokemon = Math.floor(Math.random()*899);
     return pokemon;
@@ -67,8 +80,9 @@ function recorrerCartas(cartt){
     
     
     
-    let carta2= []
-    carta2 = cartt
+    let carta= []
+    carta = cartt
+    let carta2 = revolver(carta)
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
         pedirPoke(carta2.reverse()[i]);
