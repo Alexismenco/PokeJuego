@@ -65,12 +65,15 @@ function cartas(){
 
 function recorrerCartas(cartt){
     
-    let carta2 = cartt;
-
+    let carta1 = cartt;
+    let carta2 = carta1.sort()
+    
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
         pedirPoke(carta2.reverse()[i]);
     };
+    console.log(cartt)
+    console.log(carta2)
 };
 cartas()
 
