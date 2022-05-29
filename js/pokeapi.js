@@ -81,20 +81,18 @@ function barajar(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
+    array.reverse()
  
     return array;
 }
 
 function recorrerCartas(cartt){
 
-    
     let carta2 = cartt
-    carta2.reverse()
     let cartas = carta2.concat(cartt)
-    console.log(cartas)
-    
+
     for(i=0 ; i < cartas.length; i++){
-        pedirPoke(cartas[i]);
+        pedirPoke(barajar(cartas)[i]);
     };
 };
 cartas()
