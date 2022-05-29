@@ -78,19 +78,14 @@ function cartas(){
 
 function recorrerCartas(cartt){
     
-    
-    
     let carta= []
     carta = cartt
     let carta2 = revolver(carta)
 
-    cartt = revolver(cartt)
     for(i=0 ; i < cartt.length; i++){
         pedirPoke(cartt[i]);
         pedirPoke(carta2.reverse()[i]);
     };
-
-    
 };
 cartas()
 
